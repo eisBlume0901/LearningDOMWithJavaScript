@@ -13,21 +13,23 @@
         <script>
             document.getElementById("demo").innerHTML += " and its id is retrieved by getElementById() method";
         </script>
-    </ul>
+    </ul><hr>
+
+
     <ul>document.getElementsByTagName() - Find elements by <b>tag name</b>
         <p>This sentence used a paragraph element</p>
         <script>
             document.getElementsByTagName("p").innerHTML += " and its tag name (i.   e., p) is retrieved by " +
                 "getElementsByTagName() method";
         </script>
-    </ul>
+    </ul><hr>
     <ul>document.getElementsByClassName() - Find elements by <b>class name</b>
         <br>
         <p class="sentence">This uses a paragraph element which has a class of sentence</p>
         <script>
             document.getElementsByClassName("sentence").innerHTML += " and its class is retrieved by getElementsByClassName() method";
         </script>
-    </ul>
+    </ul><br>
 <h2>Changing HTML elements</h2>
     <ul>element.innerHTML = new html content - change the inner HTML of an element
         <p id="demo2" class="sentence2">This sentence will be changed</p>
@@ -46,7 +48,7 @@
             3. ClassName
              */
         </script>
-    </ul>
+    </ul><hr>
     <ul>element.setAttribute(attribute, value) = new value - change the attribute value of an HTML element
         <p id="demo3">This paragraph element has an id of demo3</p>
         <script>
@@ -54,7 +56,7 @@
             document.getElementById("newDemo").innerHTML = "The paragraph element that has an id of demo3 has been changed to " +
                 "newDemo by the setAttribute() method";
         </script>
-    </ul>
+    </ul><hr>
     <ul>element.style.property = new style - change the style of an HTML element
         <p id="demo4">This paragraph element has an id of demo4.</p>
         <script>
@@ -62,6 +64,41 @@
             document.getElementById("demo4").style.color = "blue";
             document.getElementById("demo4").style.fontFamily = "Arial";
             // The getElementById has access to style attributes as opposed to getElementsByTagName and getElementsByClassName
+        </script>
+    </ul><br>
+<h2>Adding and Deleting Elements</h2>
+    <ul>document.createElement(element)
+    <script>
+        let newParagraphCreated = document.createElement("p");
+    </script>
+    </ul><hr>
+    <ul>document.removeChild(element)
+    <p id="demo5">This paragraph will be removed</p>
+<!--        Uncomment the script tag to see the changes-->
+        <script>
+            document.getElementById("demo5").remove();
+        </script>
+    </ul><hr>
+    <ul>document.appendChild(element)
+    <script>
+        newParagraphCreated.textContent = "This paragraph element has been created by the createElement() method and " +
+            "appended to the unordered list with an index of 6.";
+        document.getElementsByTagName("ul")[6].appendChild(newParagraphCreated);
+        // This appends the new paragraph element to the unordered list with an index of 6.
+    </script>
+    </ul><hr>
+    <ul>document.replaceWith(newValue);
+        <br>
+        <p id="demo6">This paragraph will be replaced.</p>
+        <script>
+            let newParagraphForDemo6 = "This paragraph has been replaced by the replaceChild() method";
+            document.getElementById("demo6").replaceWith(newParagraphForDemo6);
+        </script>
+    </ul><hr>
+    <ul>document.write(text)
+        <br>
+        <script>
+            document.write("This is a new paragraph element that has been written using write() method")
         </script>
     </ul>
 </body>
