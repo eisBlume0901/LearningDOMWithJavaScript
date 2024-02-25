@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
     <ul>document.getElementsByTagName() - Find elements by <b>tag name</b>
         <p>This sentence used a paragraph element</p>
         <script>
-            document.getElementByTagName("p").innerHTML += " and its tag name (i.   e., p) is retrieved by " +
+            document.getElementsByTagName("p").innerHTML += " and its tag name (i.   e., p) is retrieved by " +
                 "getElementsByTagName() method";
         </script>
     </ul>
@@ -45,6 +45,22 @@
             2. Id
             3. ClassName
              */
+        </script>
+    </ul>
+    <ul>element.setAttribute(attribute, value) = new value - change the attribute value of an HTML element
+        <p id="demo3">This paragraph element has an id of demo3</p>
+        <script>
+            document.getElementById("demo3").setAttribute("id", "newDemo");
+            document.getElementById("newDemo").innerHTML = "The paragraph element that has an id of demo3 has been changed to " +
+                "newDemo by the setAttribute() method";
+        </script>
+    </ul>
+    <ul>element.style.property = new style - change the style of an HTML element
+        <p id="demo4">This paragraph element has an id of demo4.</p>
+        <script>
+            document.getElementById("demo4").innerHTML += " The paragraph will change its color from black to blue with font style of Arial."
+            document.getElementById("demo4").style.color = "blue";
+            document.getElementById("demo4").style.fontFamily = "Arial";
         </script>
     </ul>
 </body>
