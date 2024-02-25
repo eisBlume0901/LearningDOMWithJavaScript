@@ -101,5 +101,17 @@
             document.write("This is a new paragraph element that has been written using write() method")
         </script>
     </ul>
+<h2>Adding Event Handlers</h2>
+    <ul>document.getElementById(id).onclick = function(){code} - Adding event handler code to an onclick event
+        <p id="demo7">Click the button to change the text of this paragraph element</p>
+        <button onclick="changeText()">Click me</button>
+        <script>
+            function changeText() {
+                document.getElementById("demo7").innerHTML = "The text of this paragraph element has been changed by the " +
+                    "onclick event handler";
+            }
+        </script>
+    </ul><hr>
+
 </body>
 </html>
