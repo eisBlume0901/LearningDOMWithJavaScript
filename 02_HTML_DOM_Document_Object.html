@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML DOM Document Object</title>
+</head>
+<body>
+<h1>HTML DOM Document Object</h1>
+<h2>Finding HTML Elements</h2>
+    <ul>document.getElementById() - Find an element by element <b>id</b>
+        <p id="demo">This paragraph element has an id of demo</p>
+        <script>
+            document.getElementById("demo").innerHTML += " and its id is retrieved by getElementById() method";
+        </script>
+    </ul>
+    <ul>document.getElementsByTagName() - Find elements by <b>tag name</b>
+        <p>This sentence used a paragraph element</p>
+        <script>
+            document.getElementByTagName("p").innerHTML += " and its tag name (i.   e., p) is retrieved by " +
+                "getElementsByTagName() method";
+        </script>
+    </ul>
+    <ul>document.getElementsByClassName() - Find elements by <b>class name</b>
+        <br>
+        <p class="sentence">This uses a paragraph element which has a class of sentence</p>
+        <script>
+            document.getElementsByClassName("sentence").innerHTML += " and its class is retrieved by getElementsByClassName() method";
+        </script>
+    </ul>
+<h2>Changing HTML elements</h2>
+    <ul>element.innerHTML = new html content - change the inner HTML of an element
+        <p id="demo2" class="sentence2">This sentence will be changed</p>
+        <script>
+            // Uncomment the following lines to see the changes
+            document.getElementById("demo2").innerHTML = "This sentence has been changed by the innerHTML property by retrieving " +
+                "the element by its id";
+            // document.getElementsByTagName("p")[3].innerHTML = "This sentence (paragraph 4 or paragraph that has an index of 3) " +
+            //     "has been changed by the innerHTML property by retrieving the element by its tag name";
+            document.getElementsByClassName("sentence2").innerHTML = "This sentence has been changed by the innerHTML property by " +
+                "retrieving the element by its class name";
+            /*
+            Level of hierarchy:
+            1. TagName
+            2. Id
+            3. ClassName
+             */
+        </script>
+    </ul>
+</body>
+</html>

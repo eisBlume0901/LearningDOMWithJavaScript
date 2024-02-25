@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML DOM Methods</title>
+</head>
+<body>
+<h1>HTML DOM Methods</h1>
+<p id="demo">HTML DOM methods have methods such as document.getElementById()</p>
+
+<script>
+    document.getElementById("demo").innerHTML += " which is used to find an HTML element by its id.";
+    document.getElementById("demo").innerHTML += "It is useful for changing the value of the HTML attribute " +
+        "or manipulating its style.\n"
+    document.getElementById("demo").innerHTML += "The innerHTML property is useful for changing the content of an HTML " +
+        "element which in this case, the paragraph element.\n"
+    document.getElementById("demo"). style.color = "brown";
+    document.getElementById("demo"). style.fontFamily = "Arial";
+</script>
+</body>
+</html>
