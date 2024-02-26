@@ -1,0 +1,24 @@
+
+document.getElementById();
+HTML
+document.getElementById().innerHTML = "Hello World";
+CSS
+document.getElementById().style.color = "red";
+document.getElementById().style.fontSize = 50px;
+
+
+document.getElementsByTagName(); - you have to specify the index of the HTML element you want to select
+HTML
+document.getElementsByTagName('p')[0].innerHTML = "Hello World";
+document.getElementsByTagName('p')[3].innerHTML = "Welcome to the world of JavaScript";
+CSS
+document.getElementsByTagName('p')[0].style.color = "red";
+document.getElementsByTagName('p')[3].style.fontSize = 50px;
+
+document.getElementsByClassName(); - you have to specify the index of the HTML element you want to select
+HTML
+document.getElementsByClassName('container')[0].innerHTML = "Hello World";
+document.getElementsByClassName('container')[1].innerHTML = "Welcome to the world of JavaScript";
+CSS
+document.getElementsByClassName('container')[0].style.color = "red";
+document.getElementsByClassName('container')[1].style.fontSize = 50px;

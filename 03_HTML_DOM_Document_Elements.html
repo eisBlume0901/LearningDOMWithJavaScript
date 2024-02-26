@@ -5,4 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML DOM Elements</title>
 </head>
+<body>
+    <h2>Finding HTML Element by Id</h2>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = "This sentence is added with document.getElementById."
+        const demoText = document.getElementById("demo"); // Can be stored in a const variable
+    </script>
+    <hr>
+    <h2>Finding HTML Elements by Tag Name</h2>
+    <p>This is sentence 1.</p>
+    <p>This is sentence 2.</p>
+    <script>
+        document.getElementsByTagName('p')[1].innerHTML = "This is a new sentence for sentence 1 modified with " +
+            "document.getElementsByTagName."
+        document.getElementsByTagName('p')[2].innerHTML = "This is a new sentence for sentence 2 modified with " +
+            "document.getElementsByTagName."
+        const pTagForIndex1 = document.getElementsByTagName('p')[1]; // Can be stored in a const variable
+        pTagForIndex1.style.color = "blue"; // Can modify its properties such as color
+    </script>
+    <hr>
+    <h2>Finding HTML Elements by Class Name</h2>
+    <div class="container">
+        <h4>How to get an HTML element by class name?</h4>
+        <ol>
+            <li>Add a class name inside the tags</li>
+            <li>Use the document.getElementsByClassName(class) method and put it inside the script file</li>
+            <li>(Optional) Store it in a const variable.</li>
+        </ol>
+    </div>
+    <script>
+        document.getElementsByClassName('container')[0].style.backgroundColor = "lightgray";
+    </script>
+    <hr>
+</body>
 </html>
