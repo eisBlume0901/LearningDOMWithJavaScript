@@ -38,5 +38,38 @@
         document.getElementsByClassName('container')[0].style.backgroundColor = "lightgray";
     </script>
     <hr>
+    <h2>Finding HTML Elements by CSS Selector</h2>
+    <p id="demo2">This is a paragraph element with an id of demo2</p>
+    <div class="container">
+        <p>This HTML element will have a background of blue and a color of white.</p>
+        <p></p>
+    </div>
+    <script>
+        document.querySelector("#demo2").innerHTML += "and has a color of green";
+        const demo2Text = document.querySelector("#demo2"); // Can be stored in a const variable
+        demo2Text.style.color = "green";
+
+        document.querySelectorAll(".container")[1].style.backgroundColor = "blue";
+        const container1Text = document.querySelectorAll(".container")[1]; // Can be stored in a const variable
+        container1Text.style.color = "white";
+    </script>
+    <hr>
+    <h2>Finding HTML Elements by HTML Object Collections</h2>
+    <form action="" method="GET" id="sampleForm1">
+        <label for="favColor" style="display: block;">What is your favorite color?</label>
+        <input type="text" id="favColor" name="favColor" value="Blue">
+        <label for="favNum" style="display: block; ">What is your favorite number?</label>
+        <input type="text" id="favNum" name="favNum" value="9">
+        <input type="submit" style="display: block;" name="submit" value="Submit">
+    </form>
+    <p id="output">Results: <br></p>
+    <script>
+        const formValues = Array.from(document.forms['sampleForm1']);
+        let result = "";
+        formValues.forEach(item => {
+            result += item.value + "<br>";
+        });
+        document.getElementById("output").innerHTML += result;
+    </script>
 </body>
 </html>
