@@ -1,0 +1,8 @@
+
+disabled - specifies that an input field should be
+max - specifies the greatest value that the input field can have
+min - specifies the lowest value that the input field can have
+pattern - specifies what value pattern an input field must have, uses regex
+required - specifies that an input field must be filled out before submitting the form
+type - specifies what type of input element to display (e.g., text, number, password, email, etc.)
+

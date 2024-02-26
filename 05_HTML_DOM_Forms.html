@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM Forms</title>
+</head>
+<body>
+    <h2>Form Validation</h2>
+    <form name="sampleForm" method="POST" id="sampleForm" action="" onsubmit="return validateForm()" >
+<!--        <label for="name">Name </label>-->
+<!--        <input type="text" id="name">-->
+        <label for="age">Age </label>
+        <input type="number" id="age">
+        <input type="submit" name="submit" value="Submit">
+    </form>
+<!--    Expect that there will a dialog box that will pop up if the name field is empty.-->
+    <script>
+        function validateForm() {
+            let name = document.forms['sampleForm']['name'].value;
+            if (name === "") {
+                alert("Please fill out the name field");
+                return false;
+            }
+
+            let ageVal = document.forms['sampleForm']['age'].value;
+            if (ageVal < 18 || ageVal > 30) {
+                alert("Sorry you are not eligible to join the club");
+                return false;
+            }
+        }
+    </script>
+    <h2>Automatic HTML Form Validation</h2>
+    <p>Use required for every input</p>
+    <form name="sampleForm2" id="sampleForm2" action="" method="POST">
+        <label for="username" styl>Username </label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="email">Email </label>
+        <input type="email" id="email" required>
+        <br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+
+</body>
+</html>
